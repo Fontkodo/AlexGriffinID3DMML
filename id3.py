@@ -100,7 +100,7 @@ def majorityRule(obs):
 
 def numericKey(pair):
     '''
-    Used internally for ordering nodes in a tree
+    Used internally for ordering nodes in a tree, so that, for example, "5-9" is ordered before "45-49", in constrast to the standard sorting.
     '''
     try:
         return int(pair[0].split("-")[0])
@@ -109,7 +109,7 @@ def numericKey(pair):
 
 def buildTree(obs, keys):
     '''
-    Returns the decision tree produced by the ID3 algorithm
+    Returns the decision tree produced by the ID3 algorithm, which is a list of triples, and each triple consists of an attribute, a value for said attribute, and a decision, which is either one of the target classes or another such triple.
     '''
     bestAttr = attributeWithMinimalEntropy(obs, keys)
     remainingKeys = [k for k in keys if k != bestAttr]
