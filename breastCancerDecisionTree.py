@@ -1,7 +1,10 @@
 from id3 import observation, buildTree
 
 '''
-This breast cancer domain was obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia. Thanks go to M. Zwitter and M. Soklic for providing the data. Please include this citation if you plan to use this database.
+This breast cancer domain was obtained from the University Medical Centre,
+Institute of Oncology, Ljubljana, Yugoslavia.
+Thanks go to M. Zwitter and M. Soklic for providing the data.
+Please include this citation if you plan to use this database.
 
 Attribute Information:
    1. Class: no-recurrence-events, recurrence-events
