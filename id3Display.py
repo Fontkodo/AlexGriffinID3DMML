@@ -15,7 +15,8 @@ def htmlId3Decisions(decisions, f):
 
 def html(decisions, fileName):
     '''
-    Outputs an HTML page as a visualization of the ID3 decision tree, where decisions is the decision tree and fileName will be the filename of the output file
+    Outputs an HTML page as a visualization of the ID3 decision tree,
+    where decisions is the decision tree and fileName will be the filename of the output file
     '''
     with open(fileName, "w") as f:
         f.write('''<!DOCTYPE html>
