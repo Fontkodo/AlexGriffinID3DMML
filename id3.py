@@ -2,7 +2,9 @@ import math
 
 class observation:
     '''
-    Represents one observation in the dataset; target refers to the class of the observation, and attribs to a list of values of its attributes
+    Represents one observation in the dataset;
+    target refers to the class of the observation,
+    and attribs to a list of values of its attributes
     '''
     def __init__(self, target, attribs):
         self.target = target
@@ -38,7 +40,8 @@ KEYS = sample[0].attribs.keys()
 
 def extractColumn(obs, key):
     '''
-    If one were to imagine the dataset as a table, with each observation as a row, this would extract an entire column of the table
+    If one were to imagine the dataset as a table,
+    with each observation as a row, this would extract an entire column of the table
     obs is the collection of observations, key is a particular attribute
     '''
     return[o.attribs[key] for o in obs]
@@ -100,7 +103,8 @@ def majorityRule(obs):
 
 def numericKey(pair):
     '''
-    Used internally for ordering nodes in a tree, so that, for example, "5-9" is ordered before "45-49", in constrast to the standard sorting.
+    Used internally for ordering nodes in a tree, so that, for example,
+    "5-9" is ordered before "45-49", in constrast to the standard sorting.
     '''
     try:
         return int(pair[0].split("-")[0])
@@ -109,7 +113,10 @@ def numericKey(pair):
 
 def buildTree(obs, keys):
     '''
-    Returns the decision tree produced by the ID3 algorithm, which is a list of triples, and each triple consists of an attribute, a value for said attribute, and a decision, which is either one of the target classes or another such triple.
+    Returns the decision tree produced by the ID3 algorithm,
+    which is a list of triples, and each triple consists of an attribute,
+    a value for said attribute, and a decision,
+    which is either one of the target classes or another such triple.
     '''
     bestAttr = attributeWithMinimalEntropy(obs, keys)
     remainingKeys = [k for k in keys if k != bestAttr]
