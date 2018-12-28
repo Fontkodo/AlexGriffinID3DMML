@@ -1,7 +1,5 @@
 from id3 import buildTree
-from breastCancerDecisionTree import createData
+from breastCancerDecisionTree import createData, CANCER_KEYS
 from id3Display import html
-
-CANCER_KEYS = "age menopause tumor-size inv-nodes node-caps deg-malig breast breast-quad irradiat".split()
 
 html(buildTree(createData(), CANCER_KEYS), "output.html")
